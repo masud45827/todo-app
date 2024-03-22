@@ -13,13 +13,14 @@ const TodoForm = () => {
     dispatch(
       addTodo({id:Id,title: value})
     );
+    setValue('');
   };
 
   return (
     <form onSubmit={onSubmit} >
       <input
         type="text"
-        placeholder="Add task"
+        placeholder="write task name"
         value={value}
         onChange={(event) => setValue(event.target.value)}
       ></input>
